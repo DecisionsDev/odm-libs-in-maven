@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="14 Jan 2002 10:14:51 GMT"/>
+    <details key="lastModificationDate" value="12 Dec 2003 15:20:42 GMT"/>
+  </eAnnotations>
+  <name>Music lover</name>
+  <uuid>244824e3-b4ba-4dee-b82b-41ba4faccaea</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+    the preferred item type of 'the customer' is CD  
+then 
+    append "You like music! <br>" to 'the announcement' ;  
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

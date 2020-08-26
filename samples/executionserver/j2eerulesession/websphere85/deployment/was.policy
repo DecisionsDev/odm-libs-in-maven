@@ -1,0 +1,13 @@
+grant codeBase "file:sample.war" {
+  permission java.security.AllPermission;
+};
+
+ 
+grant codeBase "file:jrules-res-session-ejb3-WAS85.jar" {
+	permission java.lang.RuntimePermission "getClassLoader";
+	permission java.io.FilePermission "-", "read";
+/* MBean plugin */
+	permission com.ibm.websphere.security.WebSphereRuntimePermission "AdminPermission";
+	permission javax.management.MBeanPermission "*", "*";
+	permission java.util.PropertyPermission "*", "read,write";
+};

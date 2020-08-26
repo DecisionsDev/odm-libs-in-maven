@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 IBM                                                             -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");                -->
+<!-- you may not use this file except in compliance with the License.               -->
+<!-- You may obtain a copy of the License at                                        -->
+<!--                                                                                -->
+<!--    http://www.apache.org/licenses/LICENSE-2.0                                  -->
+<!--                                                                                -->
+<!-- Unless required by applicable law or agreed to in writing, software            -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,              -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.       -->
+<!-- See the License for the specific language governing permissions and            -->
+<!-- limitations under the License.IBM Confidential                                 -->
+<web-app
+   version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<context-param>
+		<param-name>EJB_VERSION</param-name>
+		<param-value>3</param-value>
+	</context-param>
+	<listener>
+		<listener-class>controller.ComponentSessionListener</listener-class>
+	</listener>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<resource-ref>    
+		<res-ref-name>eis/XUConnectionFactory</res-ref-name>
+		<res-type>javax.resource.cci.ConnectionFactory</res-type>
+		<res-auth>Application</res-auth>
+		<res-sharing-scope>Unshareable</res-sharing-scope>
+	</resource-ref>
+  
+    <security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Protected Area</web-resource-name>
+			<!-- Define the context-relative URL(s) to be protected -->
+			<url-pattern>/index.jsp</url-pattern>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>resAdministrators</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Default</realm-name>
+		<form-login-config>
+			<form-login-page>/login.jsp</form-login-page>
+			<form-error-page>/error.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	<security-role>
+		<role-name>resAdministrators</role-name>
+	</security-role>
+ 
+</web-app>

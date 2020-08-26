@@ -1,0 +1,69 @@
+# Vocabulary Properties
+uuid = 90a30ced-4e64-40e0-93e6-68d537285baa
+
+# shopmodel.Announcement
+shopmodel.Announcement#concept.label = annoucement
+shopmodel.Announcement.addMessage(java.lang.String)#phrase.action = append {0} to  {this}
+
+# shopmodel.Customer
+shopmodel.Customer#concept.label = customer
+shopmodel.Customer.category#phrase.action = set the category of {this} to {category}
+shopmodel.Customer.category#phrase.navigation = {category} of {this}
+shopmodel.Customer.getAge()#phrase.navigation = {age} of {this}
+shopmodel.Customer.getCountry()#phrase.navigation = {country} of {this}
+shopmodel.Customer.getName()#phrase.navigation = {name} of {this}
+shopmodel.Customer.getPreferredItemType()#phrase.navigation = {preferred item type} of {this}
+shopmodel.Customer.getPreviousBuy()#phrase.navigation = {previous buy} of {this}
+shopmodel.Customer.hasAlreadyBought(shopmodel.ItemType)#phrase.navigation = {this}.hasAlreadyBought({0})
+shopmodel.Customer.isFirstTimeCustomer#phrase.action = make it {first time customer} that {this} is first time customer
+shopmodel.Customer.isFirstTimeCustomer#phrase.navigation = {this} is a first time customer
+shopmodel.Customer.isOlderThan(int)#phrase.navigation = {this}.isOlderThan({0})
+shopmodel.Customer.isYoungerThan(int)#phrase.navigation = {this}.isYoungerThan({0})
+shopmodel.Customer.livesIn(java.lang.String)#phrase.navigation = {this} lives in {0, <country>}
+shopmodel.Customer.setAge(int)#phrase.action = set the age of {this} to {0}
+shopmodel.Customer.setCountry(java.lang.String)#phrase.action = set the country of {this} to {0}
+shopmodel.Customer.setName(java.lang.String)#phrase.action = set the name of {this} to {0}
+shopmodel.Customer.setPreferredItemType(shopmodel.ItemType)#phrase.action = set the preferred item type of {this} to {0}
+shopmodel.Customer.setPreviousBuy(double)#phrase.action = set the previous buy of {this} to {0}
+shopmodel.Customer.setPreviousItemType(shopmodel.ItemType)#phrase.action = set the previous item type of {this} to {0}
+
+# shopmodel.Item
+shopmodel.Item#concept.label = item
+shopmodel.Item.expensive#phrase.navigation = {this} is expensive
+shopmodel.Item.getName()#phrase.navigation = {name} of {this}
+shopmodel.Item.getPrice()#phrase.navigation = {price} of {this}
+shopmodel.Item.getType()#phrase.navigation = {type} of {this}
+
+# shopmodel.ItemType
+shopmodel.ItemType#concept.label = item type
+shopmodel.ItemType.BOOK#instance.ilog.isDistinctValue = true
+shopmodel.ItemType.BOOK#instance.label = BOOK
+shopmodel.ItemType.CD#instance.ilog.isDistinctValue = true
+shopmodel.ItemType.CD#instance.label = CD
+shopmodel.ItemType.DVD#instance.ilog.isDistinctValue = true
+shopmodel.ItemType.DVD#instance.label = DVD
+shopmodel.ItemType.VIDEOGAME#instance.ilog.isDistinctValue = true
+shopmodel.ItemType.VIDEOGAME#instance.label = VIDEOGAME
+shopmodel.ItemType.music#phrase.navigation = {this} is music
+shopmodel.ItemType.toString()#phrase.navigation = {this}.toString()
+
+# shopmodel.Session
+shopmodel.Session#concept.label = session
+shopmodel.Session.displayMessage(java.lang.String)#phrase.action = display {0}
+shopmodel.Session.isItSunday()#phrase.navigation = Is It Sunday ?
+
+# shopmodel.ShoppingCart
+shopmodel.ShoppingCart#concept.label = shopping cart
+shopmodel.ShoppingCart.active#phrase.navigation = {this} is active
+shopmodel.ShoppingCart.addItem(shopmodel.Item)#phrase.action = add {0} to the items of {this}
+shopmodel.ShoppingCart.applyDiscount(float)#phrase.action = apply  {0}% discount to {this}
+shopmodel.ShoppingCart.containsItemsInRange(int,int)#phrase.navigation = {this} contains between {0} and {1} items
+shopmodel.ShoppingCart.containsMoreThan(shopmodel.ItemType,double)#phrase.navigation = {this}.containsMoreThan({0}, {1})
+shopmodel.ShoppingCart.contents#phrase.navigation = {content} of {this}
+shopmodel.ShoppingCart.discount#phrase.navigation = {discount} of {this}
+shopmodel.ShoppingCart.empty()#phrase.action = empty {this}
+shopmodel.ShoppingCart.full#phrase.navigation = {this} is full
+shopmodel.ShoppingCart.itemPurchaseOf(shopmodel.ItemType)#phrase.navigation = {this} purchase of {0, <item>}
+shopmodel.ShoppingCart.numberOfItems()#phrase.navigation = {this}.numberOfItems()
+shopmodel.ShoppingCart.value#phrase.navigation = {value} of {this}
+shopmodel.ShoppingCart.valueIsBetween(double,double)#phrase.navigation = {this} total amount is between {0, <min>} and {1, <max>}

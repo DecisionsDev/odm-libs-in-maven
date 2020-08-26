@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="isRoot" value="false"/>
+    <details key="isLeaf" value="false"/>
+    <details key="isAbstract" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="28 Jan 2002 17:43:42 GMT"/>
+    <details key="lastModificationDate" value="12 Dec 2003 15:20:42 GMT"/>
+  </eAnnotations>
+  <name>Messages</name>
+  <uuid>39fa0ab0-3c3f-415c-8a73-3b9c67643059</uuid>
+  <orderedMembers>Music lover.brl</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

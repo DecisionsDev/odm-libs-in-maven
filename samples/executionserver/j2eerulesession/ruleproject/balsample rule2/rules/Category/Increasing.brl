@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="14 Jan 2002 10:14:51 GMT"/>
+    <details key="lastModificationDate" value="12 Dec 2003 15:20:42 GMT"/>
+  </eAnnotations>
+  <name>Increasing</name>
+  <uuid>c6dd688f-39de-4eeb-a7b6-963ab8f4aab7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the value of 'the shopping cart' is at least the previous buy of 'the customer' + 200 and 
+	the previous buy of 'the customer' is at least 0 and 
+	the category of 'the customer' is "Silver"
+then
+	set the category of 'the customer' to "Gold" ;
+	append "Congratulations, your category has been upgraded to Gold! (purchase increased by 200$) <BR>" to 'the announcement' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

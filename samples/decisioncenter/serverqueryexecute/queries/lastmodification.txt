@@ -1,0 +1,2 @@
+Find all business rules
+    such that the last modification date of each business rule  is after 10/27/16 2:55:25 PM

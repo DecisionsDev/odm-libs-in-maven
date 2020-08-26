@@ -1,0 +1,15 @@
+package Category {
+   rule Silver_to_gold {
+      property status = "new";
+      when {
+         shopmodel.Customer() from customer;
+         shopmodel.ShoppingCart() from shoppingCart;
+         evaluate (((customer.category.equals("Silver"))
+         	&& shoppingCart.value > 700));
+      } then {
+         customer.category = "Gold";
+         announcement.addMessage("Congratulations, your category has been upgraded to Gold! (700$ or more purchase) <br>");
+      }
+   }
+}
+

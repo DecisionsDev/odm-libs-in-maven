@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="28 Jan 2002 16:04:26 GMT"/>
+    <details key="lastModificationDate" value="20 Sep 2004 04:23:57 GMT"/>
+  </eAnnotations>
+  <name>Platinum 1</name>
+  <uuid>0e640ec0-fc5f-49d7-9d23-48d2011feb50</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the category of  'the customer'  is "Platinum" 
+	and 'the shopping cart' total amount is between 100 and 1000 
+then
+	apply 20 % discount to 'the shopping cart' ; 
+	append "We're giving you a 20% Platinum discount! <br>" to 'the announcement' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

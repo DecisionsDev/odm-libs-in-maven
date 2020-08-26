@@ -1,0 +1,16 @@
+package Category {
+   rule Increasing {
+      property status = "new";
+      when {
+         shopmodel.ShoppingCart() from shoppingCart;
+         shopmodel.Customer() from customer;
+         evaluate (((shoppingCart.value >= customer.getPreviousBuy() + 200
+         	&& customer.getPreviousBuy() >= 0)
+         	&& (customer.category.equals("Silver"))));
+      } then {
+         customer.category = "Gold";
+         announcement.addMessage("Congratulations, your category has been upgraded to Gold! (purchase increased by 200$) <BR>");
+      }
+   }
+}
+

@@ -1,0 +1,13 @@
+package Greeting_discount {
+   rule Lots_of_CDs {
+      property status = "new";
+      when {
+         shopmodel.ShoppingCart() from shoppingCart;
+         evaluate (shoppingCart.itemPurchaseOf(shopmodel.ItemType.CD) > 200);
+      } then {
+         shoppingCart.applyDiscount(5);
+         announcement.addMessage("You're buying a lot of CDs! (5% discount) <BR>");
+      }
+   }
+}
+

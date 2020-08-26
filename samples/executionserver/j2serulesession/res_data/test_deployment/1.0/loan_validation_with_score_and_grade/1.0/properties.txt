@@ -1,0 +1,5 @@
+#Thu May 07 03:41:19 PDT 2020
+ruleset.uuid=ce9bd149-7b28-400c-88c7-66ca5666e51a
+ruleset.engine=de
+ruleset.engine.version=1.40.8
+ruleset.debug.enabled=true

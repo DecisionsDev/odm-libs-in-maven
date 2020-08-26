@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="isRoot" value="false"/>
+    <details key="isLeaf" value="false"/>
+    <details key="isAbstract" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="14 Jan 2002 10:14:51 GMT"/>
+    <details key="lastModificationDate" value="19 Jul 2004 12:52:00 GMT"/>
+    <details key="ilog.mof.cookieNames" value="ilog.rules.repository.brm.IlrDefaultRulesetComposer"/>
+  </eAnnotations>
+  <name>balsample rule</name>
+  <uuid>5582f274-47ea-4d4d-be39-6dacc4c07302</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="j2eerulesession" url="platform:/j2eerulesession" kind="JAVA_PROJECT"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="balsample" url="platform:/balsample" kind="RULE_PROJECT"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="balsample" url="platform:/balsample" kind="RULE_PROJECT">
+      <ruleProject href="../../../../../../Documents%20and%20Settings/chamma/workspaceFusionIT12/balsample#f6c7104c-1bb3-427c-9338-c8c27da98989"/>
+    </entries>
+  </paths>
+  <parameters name="customer" type="shopmodel.Customer" initialValue="" verbalization="the customer"/>
+  <parameters name="shoppingCart" type="shopmodel.ShoppingCart" initialValue="" verbalization="the shopping cart"/>
+  <parameters name="announcement" type="shopmodel.Announcement" initialValue="" verbalization="the announcement" direction="IN_OUT"/>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+</ilog.rules.studio.model.base:RuleProject>

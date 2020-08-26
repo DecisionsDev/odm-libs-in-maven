@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="isRoot" value="false"/>
+    <details key="isLeaf" value="false"/>
+    <details key="isAbstract" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="28 Jan 2002 14:52:19 GMT"/>
+    <details key="lastModificationDate" value="12 Dec 2003 15:20:42 GMT"/>
+  </eAnnotations>
+  <name>Category</name>
+  <uuid>b3098d38-fad6-4883-b32c-a4bef1cdfe8f</uuid>
+  <orderedMembers>Increasing.brl</orderedMembers>
+  <orderedMembers>Gold to platinum.brl</orderedMembers>
+  <orderedMembers>Silver to gold.brl</orderedMembers>
+  <orderedMembers>Senior upgrade.brl</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

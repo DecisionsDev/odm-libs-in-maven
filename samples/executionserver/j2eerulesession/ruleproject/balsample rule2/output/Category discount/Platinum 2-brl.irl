@@ -1,0 +1,15 @@
+package Category_discount {
+   rule Platinum_2 {
+      property status = "new";
+      when {
+         shopmodel.Customer() from customer;
+         shopmodel.ShoppingCart() from shoppingCart;
+         evaluate (((customer.category.equals("Platinum"))
+         	&& shoppingCart.value > 1000));
+      } then {
+         shoppingCart.applyDiscount(25);
+         announcement.addMessage("We're giving you a 25% Platinum discount! <br>");
+      }
+   }
+}
+

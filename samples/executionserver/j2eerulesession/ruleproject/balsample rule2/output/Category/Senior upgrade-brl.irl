@@ -1,0 +1,14 @@
+package Category {
+   rule Senior_upgrade {
+      property status = "new";
+      when {
+         shopmodel.Customer() from customer;
+         evaluate ((customer.getAge() > 60
+         	&& (customer.category.equals("Silver"))));
+      } then {
+         customer.category = "Gold";
+         announcement.addMessage("Congratulations, your category has been upgraded to Gold! (Senior upgrade)");
+      }
+   }
+}
+

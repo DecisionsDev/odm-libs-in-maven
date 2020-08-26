@@ -1,0 +1,2 @@
+Find all business rules
+    such that each business rule  is never applicable

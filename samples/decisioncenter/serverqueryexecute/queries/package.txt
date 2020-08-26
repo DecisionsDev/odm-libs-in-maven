@@ -1,0 +1,2 @@
+Find all business rules
+    such that the name of the rule package of each business rule  is "computation"

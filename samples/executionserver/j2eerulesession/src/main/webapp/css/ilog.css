@@ -1,0 +1,509 @@
+/* --------------------------------------------------------------- -- CSS --
+ Copyright 2020 IBM
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.IBM Confidential
+--------------------------------------------------------------------------*/
+body  { /*  font: messagebox;*/
+	font-family: Arial, sans-serif;
+  margin: 0px;
+}
+
+td,th,button,input,select { /*  font: messagebox;*/
+	font-family: Arial, sans-serif;
+
+}
+
+td.mainPanel {
+	padding: 20px;
+}
+
+.footer {
+	background:#336799;
+	color:white;
+	font-size:11px;
+}
+.panelTitle {
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #CCCCCC;
+	text-decoration: none;
+	padding-bottom: 5px;
+	padding-left: 10px;	
+}
+.panelText {
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	padding-bottom: 5px;
+	padding-left: 10px;	
+}
+
+.breadcrumbselected {
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: CC9900;
+	text-decoration: underline;
+}
+
+.panelHeader1 {
+	      color:#336799;
+	      font-size:12px;
+	      font-style:normal;
+	      font-variant:normal;
+	      font-weight:normal;
+	      line-height:normal;
+	      padding-left:10px;
+	      text-decoration:none;
+	      text-transform:none;
+	      vertical-align:top;
+	      white-space:nowrap;
+}
+
+/*tables*/
+table.border {
+	border-style: solid solid solid solid;
+	border-width: 1px;
+	border-color: #808080;
+	font-size: 13px;
+}
+
+th {
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	background-color: #7BA5C6;
+}
+
+tr.border {
+	
+}
+
+td.border {
+	border: 1px solid #808080;
+}
+
+table.noborder {
+	border-style: none;
+	border-collapse:collapse;
+	font-size: 13px;
+	width: 99%;
+	padding-left: 5px;	
+	padding-right: 5px;
+}
+table.greybox {
+	font-size: 13px;
+	width: 70%;
+	padding-left: 5px;	
+	padding-right: 5px;
+	margin:30px;
+	background-color:#FFFFFF;
+	border-collapse:collapse;	
+	border:1px solid #DDDDDD;
+	
+}
+
+td.noborder {
+	border-style: none;
+	border-collapse:collapse;	
+}
+
+.breadcrumb {
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: 006699;
+	text-decoration: none;
+}
+
+HR {
+	color: #CCCCCC;
+	height: 1px;
+}
+
+a.bannerLink {
+	color: black;
+	text-decoration: none;
+}
+
+a.bannerLink:hover {
+	text-decoration: underline;
+}
+
+.bodytextdialog {
+	font-size: 12px;
+}
+
+.notetext {
+	font-size: 11px;
+}
+
+.bodytexterror {
+	font-size: 12px;
+	color: red;
+}
+
+.bodytexterror a {
+	font-size: 12px;
+	color: red;
+}
+
+.bodytexterror a:hover,.bodytexterror a:active {
+	color: #CC9900;
+}
+
+.bodytextwarning {
+	color: red;
+}
+
+.bodytextbold {
+	font-weight: bold;
+}
+
+.leftNavboldbig {
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: 006699;
+	text-decoration: none;
+}
+
+a.bluelink {
+	color: #006699;
+	text-decoration: none;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+a.bluelink:hover {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+a.bluelink:active {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+a.blacklink {
+	color: black;
+	text-decoration: underline;
+}
+
+a.blacklink:hover {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+a.blacklink:active {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+.undercolor {
+		color: #CC9900;
+	text-decoration: underline;
+	}
+input.readonly {
+	color: gray;
+}
+
+.site-title {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial;
+	padding-left: 5px;
+}
+
+h2 {
+	color: #336799;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial;
+	margin: 0em;
+	padding: 0em;
+}
+
+ul {
+	margin-left: 2.5em;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+.site-title-desc {
+	color: white;
+	font-size: 12px;
+}
+
+.copyright {
+	background-color: #336799;
+}
+
+.log-style {
+	color: white;
+	font-size: 11px;
+}
+
+a.log-style:hover {
+	text-decoration: underline;
+}
+
+.tab_group {
+	valign: middle;
+	align: center;
+}
+
+.tab_unselected {
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+	align: center;
+	letter-spacing: 2px;
+}
+
+.tab_selected {
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	align: center;
+	letter-spacing: 2px;
+}
+
+a.tab {
+	text-decoration: none;
+}
+
+a.tab:hover,a.tab:active,a.tab_selected:hover,a.tab_selected:active {
+	color: #CC9900;
+	text-decoration: none;
+}
+
+.left_pane {
+	background-color: #FFFFE7;
+}
+
+.virtualfolder-unselected {
+	text-decoration: none;
+	color: black;
+}
+
+.virtualfolder-selected {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+
+.page-title {
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+}
+
+table.comparator-global-style {
+	border-collapse: collapse;
+	border-spacing: 20;
+	padding: 0;
+	border: 1px solid black;
+}
+
+table.comparator-global-style td {
+	border: 1px solid black;
+}
+
+td.comparator-added-style {
+	background-color: #CCFFCC;
+	/*border:1px solid black;*/
+}
+
+td.comparator-removed-style {
+	background-color: #CCCCFF;
+	/*border:1px solid black;*/
+}
+
+td.comparator-changed-style {
+	background-color: #FFCCCC;
+	/*border:1px solid black;*/
+}
+
+td.comparator-unchanged-style { /*border:1px solid black;*/
+	
+}
+
+td.comparator-empty-style {
+	background-color: #CCCCCC;
+	/*border:1px solid black;*/
+}
+
+th.comparator-header {
+	border: 1px solid black;
+	background-color: #8BA8C6;
+	color: white;
+}
+
+td.label {
+	background-color: #F0F4F3;
+	width: 100;
+}
+
+td.preview {
+	background-color: #F0F4F3;
+}
+
+.gray-pane {
+	background-color: #F0F4F3;
+}
+
+/* Osoletes? todo NDR: remove those rules if obsolete */
+table.titlebar {
+	background-color: #005DA0;
+	width: 100%;
+	text-align: left;
+	color: white;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.white-text {
+	color: white;
+}
+
+.lightblue-text {
+	color: lightblue;
+}
+
+.navigationBar {
+	color: #006699;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.test {
+	color: #006699;
+	text-decoration: none;
+}
+
+a.navigationBar {
+	color: #006699;
+	font-weight: bold;
+	font-size: 10;
+	text-decoration: none;
+}
+
+a.navigationBar:hover {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+a.navigationBar:active {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+a.navigationBarLatest {
+	color: #006699;
+	font-size: 10;
+	text-decoration: none;
+}
+
+a.navigationBarLatest:hover {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+a.navigationBarLatest:active {
+	color: #CC9900;
+	text-decoration: underline;
+}
+
+.flatPath {
+	font-size: 14px;
+	font-style: normal;
+}
+
+.ruleexplorer-unselected {
+	
+}
+
+.ruleexplorer-selected {
+	font-weight: bold;
+}
+
+.boxGrey{ 
+	padding: 10px; 
+	margin-top: 10px;
+	background-color:#EFEFEF; 
+	border-width: 1px; 
+	border-style: solid;
+	border-color:#cccccc;
+	vertical-align:middle
+}
+
+
+
+.center
+{ 
+	padding:20px;
+text-align: center;
+}
+
+.centeredColumn {
+	text-align: center;
+}
+
+.dialogHeader {
+	text-align: left;
+	padding: 10px;
+}
+
+.dialogFooter {
+	text-align: right;
+	padding: 10px;
+}
+.dialogContent {
+	padding-left: 30px;
+	text-align: left;
+}
+.dialogTitle {
+	font-size: 18px;
+	font-weight: bold;
+	color: #666666;
+}
+.dialogMessage {
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+}
+

@@ -1,0 +1,14 @@
+package Greeting_discount {
+   rule Welcome_Country {
+      property status = "new";
+      when {
+         shopmodel.Customer() from customer;
+         evaluate ((customer.livesIn("USA")
+         	&& customer.isFirstTimeCustomer));
+      } then {
+         shoppingCart.applyDiscount(10);
+         announcement.addMessage("Welcome gift (10% discount) to new American customers!");
+      }
+   }
+}
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="14 Jan 2002 10:14:51 GMT"/>
+    <details key="lastModificationDate" value="20 Sep 2004 04:23:51 GMT"/>
+  </eAnnotations>
+  <name>Welcome Japan</name>
+  <uuid>7cb76b06-b024-41a9-b9b7-007a141947ef</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	'the customer' lives in "USA" 
+	and 'the customer' is a first time customer 
+then
+	apply 10 % discount to 'the shopping cart' ; 
+	append "Welcome gift (10% discount) to new American customers!" to 'the announcement' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

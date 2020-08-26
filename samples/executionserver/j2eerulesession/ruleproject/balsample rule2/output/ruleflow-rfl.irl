@@ -1,0 +1,51 @@
+
+flowtask ruleflow {
+  property mainflowtask = true;
+  body {
+    fork
+    {
+      ruleflow#Message;
+    }
+    &&
+    {
+      ruleflow#Category;
+    }
+    ruleflow#Category_discount;
+    if (shopmodel.Session.isItSunday()) {
+      ruleflow#Greeting_discount;
+    }
+  }
+};
+
+ruletask ruleflow#Message {
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Messages.*
+  }
+};
+
+ruletask ruleflow#Category {
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Category.*
+  }
+};
+
+ruletask ruleflow#Category_discount {
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Category_discount.*
+  }
+};
+
+ruletask ruleflow#Greeting_discount {
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Greeting_discount.*
+  }
+};
+

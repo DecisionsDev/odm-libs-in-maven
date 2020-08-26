@@ -1,0 +1,94 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/balsample/j2eerulesession"
+property uuid "04825102-d5f9-44bb-8dc3-c66972d1f957"
+package shopmodel;
+
+
+public class Announcement
+{
+    public void addMessage(string msg);
+}
+
+public class Customer
+        extends java.io.Serializable
+{
+    public int age;
+    public string category;
+    public string country;
+    public boolean isFirstTimeCustomer;
+    public string name;
+    public shopmodel.ItemType preferredItemType;
+    public double previousBuy;
+    public shopmodel.ItemType previousItemType;
+    public Customer();
+    public int getAge();
+    public string getCountry();
+    public string getName();
+    public shopmodel.ItemType getPreferredItemType();
+    public double getPreviousBuy();
+    public boolean hasAlreadyBought(shopmodel.ItemType arg);
+    public boolean isOlderThan(int arg);
+    public boolean isYoungerThan(int arg);
+    public boolean livesIn(string arg);
+    public void setAge(int arg);
+    public void setCategory(string arg);
+    public void setCountry(string arg);
+    public void setName(string arg);
+    public void setPreferredItemType(shopmodel.ItemType arg);
+    public void setPreviousBuy(double arg);
+    public void setPreviousItemType(shopmodel.ItemType arg);
+}
+
+public class Item
+        extends java.io.Serializable
+{
+    public readonly boolean expensive;
+    public string name;
+    public double price;
+    public shopmodel.ItemType type;
+    public Item(shopmodel.ItemType arg1, double arg2, string arg3);
+    public string getName();
+    public double getPrice();
+    public shopmodel.ItemType getType();
+}
+
+public class ItemType
+        extends java.io.Serializable
+{
+    domain {static CD, static BOOK, static DVD, static VIDEOGAME}
+    public static final readonly shopmodel.ItemType BOOK;
+    public static final readonly shopmodel.ItemType CD;
+    public static final readonly shopmodel.ItemType DVD;
+    public static final readonly shopmodel.ItemType VIDEOGAME;
+    public readonly boolean music;
+    public string toString();
+}
+
+public class Session
+{
+    public static void displayMessage(string arg);
+    public static boolean isItSunday();
+}
+
+public class ShoppingCart
+        extends java.io.Serializable
+{
+    public readonly boolean active;
+    public readonly java.util.Vector contents domain 0,* class shopmodel.Item;
+    public readonly float discount;
+    public readonly boolean full;
+    public readonly double value;
+    public ShoppingCart();
+    public void addItem(shopmodel.Item arg);
+    public void applyDiscount(float arg);
+    public void applyDiscountFromRule(float arg1, string arg2);
+    public boolean containsItemsInRange(int arg1, int arg2);
+    public boolean containsMoreThan(shopmodel.ItemType arg1, double arg2);
+    public void empty();
+    public double itemPurchaseOf(shopmodel.ItemType arg);
+    public int numberOfItems();
+    public void setCustomer(shopmodel.Customer customer);
+    public boolean valueIsBetween(double arg1, double arg2);
+}
+

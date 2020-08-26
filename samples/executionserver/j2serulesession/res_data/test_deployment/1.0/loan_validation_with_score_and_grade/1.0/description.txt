@@ -1,0 +1,6 @@
+Used for testing and simulation:
+-  input a loan request and a borrower
+- output the loan report, the grade, and the score.
+Rules from  projects : Check, Determination, Scoring
+with no extraction mechanism.
+      

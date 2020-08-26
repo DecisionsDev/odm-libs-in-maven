@@ -1,0 +1,14 @@
+grant codeBase "file:sample.war" {
+  permission java.security.AllPermission;
+
+  /* MBean plugin */
+  permission com.ibm.websphere.security.WebSphereRuntimePermission "AdminPermission";
+  permission javax.management.MBeanPermission "*", "*";
+  permission java.lang.RuntimePermission "getClassLoader";
+
+  /* File persistence + log */
+  permission java.io.FilePermission "${was.install.root}${/}-", "read,write,delete";
+  permission java.io.FilePermission "${user.install.root}${/}-", "read,write,delete";
+  permission java.io.FilePermission "${rules.mbean.descriptor.dir}${/}jrules-mbean-descriptors.jar", "read";
+};
+

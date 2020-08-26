@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="28 Jan 2002 15:01:43 GMT"/>
+    <details key="lastModificationDate" value="12 Dec 2003 15:20:42 GMT"/>
+  </eAnnotations>
+  <name>Silver to gold</name>
+  <uuid>ddbcfd27-101e-4244-8326-1bd976ee40a7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the category of 'the customer' is "Silver" 
+	and the value of 'the shopping cart'  is more than 700 
+then
+	set the category of 'the customer'  to "Gold" ;
+	append "Congratulations, your category has been upgraded to Gold! (700$ or more purchase) <br>" to 'the announcement' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

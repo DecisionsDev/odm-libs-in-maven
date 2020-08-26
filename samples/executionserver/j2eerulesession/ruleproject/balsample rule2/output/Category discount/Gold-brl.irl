@@ -1,0 +1,16 @@
+package Category_discount {
+   rule Gold {
+      property status = "new";
+      when {
+         shopmodel.ShoppingCart() from shoppingCart;
+         shopmodel.Customer() from customer;
+         evaluate (((shoppingCart.containsItemsInRange(2, 4)
+         	&& shoppingCart.value > 100)
+         	&& (customer.category.equals("Gold"))));
+      } then {
+         shoppingCart.applyDiscount(15);
+         announcement.addMessage("We're giving you a 15% Gold discount!");
+      }
+   }
+}
+

@@ -1,0 +1,2 @@
+Find all business rules
+    such that the status of each business rule  is new

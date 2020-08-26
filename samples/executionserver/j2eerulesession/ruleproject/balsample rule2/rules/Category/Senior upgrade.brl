@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="28 Jan 2002 15:02:55 GMT"/>
+    <details key="lastModificationDate" value="12 Dec 2003 15:20:42 GMT"/>
+  </eAnnotations>
+  <name>Senior upgrade</name>
+  <uuid>ecf46180-d450-479d-8d51-375ebc4994ba</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the age of 'the customer'  is more than 60 
+	and the category of 'the customer'  is "Silver" 
+then
+	set the category of 'the customer' to "Gold" ;
+	append "Congratulations, your category has been upgraded to Gold! (Senior upgrade)" to 'the announcement' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,2 @@
+Find all business rules
+    such that the creator of each business rule  is "Paul"

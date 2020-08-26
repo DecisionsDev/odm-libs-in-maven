@@ -1,0 +1,12 @@
+package Messages {
+   rule Music_lover {
+      property status = "new";
+      when {
+         shopmodel.Customer() from customer;
+         evaluate ((customer.getPreferredItemType().equals(shopmodel.ItemType.CD)));
+      } then {
+         announcement.addMessage("You like music! <br>");
+      }
+   }
+}
+

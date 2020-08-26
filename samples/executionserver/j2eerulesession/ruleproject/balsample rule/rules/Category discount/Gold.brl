@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="14 Jan 2002 10:14:51 GMT"/>
+    <details key="lastModificationDate" value="20 Sep 2004 04:24:00 GMT"/>
+  </eAnnotations>
+  <name>Gold</name>
+  <uuid>138063ff-56f6-4ef3-9cdb-aab3ef8199ac</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	'the shopping cart' contains between 2 and 4 items
+	and the value of 'the shopping cart'  is more than 100 
+	and the category of 'the customer' is "Gold" 
+then
+	apply 15 % discount to 'the shopping cart' ;   
+	append "We're giving you a 15% Gold discount!" to 'the announcement' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

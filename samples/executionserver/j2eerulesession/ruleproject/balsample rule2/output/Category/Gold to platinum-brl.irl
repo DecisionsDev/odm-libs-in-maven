@@ -1,0 +1,15 @@
+package Category {
+   rule Gold_to_platinum {
+      property status = "new";
+      when {
+         shopmodel.Customer() from customer;
+         shopmodel.ShoppingCart() from shoppingCart;
+         evaluate (((customer.category.equals("Gold"))
+         	&& shoppingCart.value > 1200));
+      } then {
+         customer.category = "Platinum";
+         announcement.addMessage("Congratulations, your category has been upgraded to Platinum! (1200$ or more purchase) <br>");
+      }
+   }
+}
+

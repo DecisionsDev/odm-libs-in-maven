@@ -1,0 +1,1 @@
+loan validation with score and grade

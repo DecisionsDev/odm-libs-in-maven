@@ -261,6 +261,18 @@
                     </execution>
 
                     <execution>
+                        <id>deploy-wbemodel</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/wbemodel.jar</file>
+                            <artifactId>wbemodel</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
                         <id>deploy-decisioncenter-dependencies</id>
                         <phase>deploy</phase>
                         <goals>

@@ -25,12 +25,62 @@
     <dependencies>
         <dependency>
             <groupId>com.ibm.odm</groupId>
+            <artifactId>bdsl-core-dt</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>bdsl-dtx-core</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>bdsl-web-dt</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-common-rs4jutils</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-dataaccess-events</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-dataaccess-rs4j</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-decisionservice</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-decisionservice-model</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
             <artifactId>jrules-engine</artifactId>
             <version>${odm.version}</version>
         </dependency>
         <dependency>
             <groupId>com.ibm.odm</groupId>
             <artifactId>jrules-language</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-model-dataaccess</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-model-xml</artifactId>
             <version>${odm.version}</version>
         </dependency>
         <dependency>
@@ -45,7 +95,22 @@
         </dependency>
         <dependency>
             <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-synchronization</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
             <artifactId>jrules-teamserver</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>jrules-validation</artifactId>
+            <version>${odm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.odm</groupId>
+            <artifactId>wbemodel</artifactId>
             <version>${odm.version}</version>
         </dependency>
 

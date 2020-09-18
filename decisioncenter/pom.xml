@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2020 IBM                                                             -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");                -->
+<!-- you may not use this file except in compliance with the License.               -->
+<!-- You may obtain a copy of the License at                                        -->
+<!--                                                                                -->
+<!--    http://www.apache.org/licenses/LICENSE-2.0                                  -->
+<!--                                                                                -->
+<!-- Unless required by applicable law or agreed to in writing, software            -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,              -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.       -->
+<!-- See the License for the specific language governing permissions and            -->
+<!-- limitations under the License.IBM Confidential                                 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ibm.odm</groupId>
+    <artifactId>decisioncenter</artifactId>
+    <version>8.9.2.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <decisioncenter.lib>${odm.home}/teamserver/lib</decisioncenter.lib>
+        <repositoryId>define your repository id</repositoryId>
+        <repositoryUrl>define your repository url</repositoryUrl>
+        <groupId>com.ibm.odm</groupId>
+        <odm.version>${project.version}</odm.version>
+    </properties>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>3.0.0-M1</version>
+                    <executions>
+                        <execution>
+                            <id>default-deploy</id>
+                            <phase>deploy</phase>
+                            <configuration>
+                                <skip>true</skip>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <repositoryId>${repositoryId}</repositoryId>
+                    <url>${repositoryUrl}</url>
+                    <groupId>${groupId}</groupId>
+                    <version>${odm.version}</version>
+                    <packaging>jar</packaging>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>deploy-bdsl-core-dt</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/bdsl-core-dt.jar</file>
+                            <artifactId>bdsl-core-dt</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-bdsl-dtx-core</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/bdsl-dtx-core.jar</file>
+                            <artifactId>bdsl-dtx-core</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-bdsl-web-dt</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/bdsl-web-dt.jar</file>
+                            <artifactId>bdsl-web-dt</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-common-rs4jutils</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-common-rs4jutils.jar</file>
+                            <artifactId>jrules-common-rs4jutils</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-dataaccess-events</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-dataaccess-events.jar</file>
+                            <artifactId>jrules-dataaccess-events</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-dataaccess-rs4j</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-dataaccess-rs4j.jar</file>
+                            <artifactId>jrules-dataaccess-rs4j</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-decisionservice</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-decisionservice.jar</file>
+                            <artifactId>jrules-decisionservice</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-decisionservice-model</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-decisionservice-model.jar</file>
+                            <artifactId>jrules-decisionservice-model</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-engine</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-engine.jar</file>
+                            <artifactId>jrules-engine</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-language</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-language.jar</file>
+                            <artifactId>jrules-language</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-model-dataaccess</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-model-dataaccess.jar</file>
+                            <artifactId>jrules-model-dataaccess</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-model-xml</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-model-xml.jar</file>
+                            <artifactId>jrules-model-xml</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-res-tools</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-res-tools.jar</file>
+                            <artifactId>jrules-res-tools</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-ruleartifacts</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-ruleartifacts.jar</file>
+                            <artifactId>jrules-ruleartifacts</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-synchronization</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-synchronization.jar</file>
+                            <artifactId>jrules-synchronization</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-teamserver</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-teamserver.jar</file>
+                            <artifactId>jrules-teamserver</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jrules-validation</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jrules-validation.jar</file>
+                            <artifactId>jrules-validation</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-wbemodel</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/wbemodel.jar</file>
+                            <artifactId>wbemodel</artifactId>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-decisioncenter-dependencies</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${project.basedir}/decisioncenter-dependencies.xml</file>
+                            <artifactId>decisioncenter-dependencies</artifactId>
+                            <packaging>pom</packaging>
+                        </configuration>
+                    </execution>
+
+                    <!-- Deploy some required third party jars missing in maven central -->
+                    <execution>
+                        <id>deploy-eclipse-emf-common</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.common_2.6.0.v201006141136.jar</file>
+                            <groupId>org.eclipse.emf</groupId>
+                            <artifactId>common</artifactId>
+                            <version>2.6.0.v201006141136</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-eclipse-emf-ecore</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.ecore_2.6.0.v201006141136.jar</file>
+                            <groupId>org.eclipse.emf</groupId>
+                            <artifactId>ecore</artifactId>
+                            <version>2.6.0.v201006141136</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-eclipse-emf-ecore-edit</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.ecore-edit_2.6.0.v201006141136.jar</file>
+                            <groupId>org.eclipse.emf</groupId>
+                            <artifactId>ecore-edit</artifactId>
+                            <version>2.6.0.v201006141136</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-eclipse-emf-ecore-xmi</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.ecore-xmi_2.5.0.v201005211846.jar</file>
+                            <groupId>org.eclipse.emf</groupId>
+                            <artifactId>ecore-xmi</artifactId>
+                            <version>2.5.0.v201005211846</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-eclipse-emf-mapping</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.mapping_2.6.0.v201006141136.jar</file>
+                            <groupId>org.eclipse.emf</groupId>
+                            <artifactId>mapping</artifactId>
+                            <version>2.6.0.v201006141136</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-eclipse-emf-mapping-ecore2ecore</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.mapping-ecore2ecore_2.5.0.v201005211847.jar</file>
+                            <groupId>org.eclipse.emf</groupId>
+                            <artifactId>mapping-ecore2ecore</artifactId>
+                            <version>2.5.0.v201005211847</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-json4j</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/json4j-1.0.0.2.jar</file>
+                            <groupId>com.ibm.json</groupId>
+                            <artifactId>json4j</artifactId>
+                            <version>1.0.0.2</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>deploy-jta</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/jta-1.0.1B.jar</file>
+                            <groupId>javax.transaction</groupId>
+                            <artifactId>jta</artifactId>
+                            <version>1.0.1B</version>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

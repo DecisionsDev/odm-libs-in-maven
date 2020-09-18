@@ -33,5 +33,17 @@ client applications using Decision Server factories API. Add it as a dependency 
 
 A usage example can be found in the github repository. In `samples/executionserver/j2serulesession`.
 
-# TODO 
-* Build J2EE application war with Execution Server libs using Maven  
+## Executing rulesets using Java EE rules session 
+
+The `executionserver-j2eerulesession-dependencies.xml` pom references the dependencies to build
+client applications using Decision Server Java EE rules session API. Add it as a dependency pom in your project to quickly build your application. 
+``` 
+<dependency>
+     <groupId>com.ibm.odm</groupId>
+     <artifactId>executionserver-j2eerulesession-dependencies</artifactId>
+     <version><YOUR ODM VERSION></version>
+     <type>pom</type>
+</dependency>
+```
+
+A usage example can be found in the github repository. In `samples/executionserver/j2eerulesession`.

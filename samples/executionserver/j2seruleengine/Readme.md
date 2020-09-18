@@ -4,7 +4,7 @@
 ## Requirements
 Install the sample Execution Object Model (XOM) in your local Maven repository if it is not yet installed. <br/>
 Run: <br/>
-`mvn install:install-file -Dfile=xom/loan-validation-xom.jar -DgroupId=com.ibm.odm -DartifactId=loan-validation-xom 
+`mvn install:install-file -Dfile=xom/loan-validation-xom.jar -DgroupId=com.ibm.odm.samples -DartifactId=loan-validation-xom 
 -Dversion=1.0 -Dpackaging=jar`
 
 ## import the project in Eclipse

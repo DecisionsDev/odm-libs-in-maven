@@ -1,6 +1,6 @@
 # Deploying IBM Operational Decision Manager libraries on a Maven repository
 
-This zip contains the material to deploy IBM Operational Decision Manager 8.9.2.2 libraries to a Maven repository. 
+This zip contains the material to deploy IBM Operational Decision Manager 8.9.2.3 libraries to a Maven repository. 
 It includes Maven pom files to deploy the libraries, and dependency poms that lists all the required libraries to build
 an ODM client application. 
 

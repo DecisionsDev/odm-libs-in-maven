@@ -16,7 +16,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>executionserver-j2eerulesession-dependencies</artifactId>
-    <version>8.10.2.0</version>
+    <version>8.10.2.2</version>
     <packaging>pom</packaging>
 
     <properties>

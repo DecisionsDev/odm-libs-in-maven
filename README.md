@@ -1,8 +1,8 @@
 
-# Deploying IBM Operational Decision Manager libraries on a Maven repository
+# Deploying IBM Operational Decision Manager libraries to a Maven repository
 
 [![GitHub release](https://img.shields.io/github/release/ODMDev/odm-libs-in-maven.svg)](https://github.com/ODMDev/odm-libs-in-maven/releases)
-![GitHub last commit](https://img.shields.io/github/last-commit/ODMDev/odm-libs-in-maven)
+![GitHub release date](https://img.shields.io/github/release-date/ODMDev/odm-libs-in-maven)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This repository centralizes the material to deploy IBM Operational Decision Manager libraries to a Maven repository. 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2020 IBM                                                             -->
+<!-- Copyright 2023 IBM                                                             -->
 <!-- Licensed under the Apache License, Version 2.0 (the "License");                -->
 <!-- you may not use this file except in compliance with the License.               -->
 <!-- You may obtain a copy of the License at                                        -->
@@ -17,7 +17,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>executionserver</artifactId>
-    <version>8.10.5.0</version>
+    <version>8.11.1.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -249,18 +249,6 @@
                     </execution>
 
                     <execution>
-                        <id>deploy-runner</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${executionserver.lib}/runner.jar</file>
-                            <artifactId>runner</artifactId>
-                        </configuration>
-                    </execution>
-
-                    <execution>
                         <id>deploy-testingrunner</id>
                         <phase>deploy</phase>
                         <goals>
@@ -319,9 +307,9 @@
                             <goal>deploy-file</goal>
                         </goals>
                         <configuration>
-                            <file>${executionserver.lib}/bai-odm-events-java-sdk-1.1.7.jar</file>
+                            <file>${executionserver.lib}/bai-odm-events-java-sdk-1.1.9.jar</file>
                             <artifactId>bai-odm-events-java-sdk</artifactId>
-                            <version>1.1.7</version>
+                            <version>1.1.9</version>
                         </configuration>
                     </execution>
 
@@ -332,9 +320,9 @@
                             <goal>deploy-file</goal>
                         </goals>
                         <configuration>
-                            <file>${executionserver.lib}/bai-events-java-sdk-1.0.9.jar</file>
+                            <file>${executionserver.lib}/bai-events-java-sdk-1.0.13.jar</file>
                             <artifactId>bai-events-java-sdk</artifactId>
-                            <version>1.0.9</version>
+                            <version>1.0.13</version>
                         </configuration>
                     </execution>
                     <!-- End of XU BAI plugin artifacts -->
@@ -452,20 +440,6 @@
                             <groupId>javax.xml</groupId>
                             <artifactId>saaj-api</artifactId>
                             <version>1.2.IBM</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-openxml4j</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${executionserver.lib}/openxml4j-beta.jar</file>
-                            <groupId>org.openxml4j</groupId>
-                            <artifactId>openxml4j</artifactId>
-                            <version>beta</version>
                         </configuration>
                     </execution>
                 </executions>

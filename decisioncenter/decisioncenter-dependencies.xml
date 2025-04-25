@@ -16,7 +16,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>decisioncenter-dependencies</artifactId>
-    <version>8.11.1.0</version>
+    <version>9.0.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -112,33 +112,33 @@
         <!-- third party dependencies -->
         <dependency>
             <groupId>org.eclipse.emf</groupId>
-            <artifactId>common</artifactId>
-            <version>2.6.0.v201006141136</version>
+            <artifactId>org.eclipse.emf.common</artifactId> 
+            <version>2.31.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.emf</groupId>
-            <artifactId>ecore</artifactId>
-            <version>2.6.0.v201006141136</version>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <version>2.37.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.emf.ecore</groupId>
+            <artifactId>edit</artifactId>
+            <version>2.3.0-v200706262000</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.emf</groupId>
-            <artifactId>ecore-edit</artifactId>
-            <version>2.6.0.v201006141136</version>
+            <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+            <version>2.16.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.emf</groupId>
-            <artifactId>ecore-xmi</artifactId>
-            <version>2.5.0.v201005211846</version>
+            <artifactId>org.eclipse.emf.mapping</artifactId>
+            <version>2.12.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.emf</groupId>
-            <artifactId>mapping</artifactId>
-            <version>2.6.0.v201006141136</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>mapping-ecore2ecore</artifactId>
-            <version>2.5.0.v201005211847</version>
+            <artifactId>org.eclipse.emf.mapping.ecore2ecore</artifactId>
+            <version>2.11.0</version>
         </dependency>
         <dependency>
             <groupId>aopalliance</groupId>

@@ -16,7 +16,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>executionserver-engine-dependencies</artifactId>
-    <version>8.11.1.0</version>
+    <version>9.0.0.0</version>
     <packaging>pom</packaging>
 
     <properties>

@@ -17,7 +17,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>decisioncenter</artifactId>
-    <version>8.11.1.0</version>
+    <version>9.0.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -32,7 +32,7 @@
             <plugins>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.1.4</version>
                     <executions>
                         <execution>
                             <id>default-deploy</id>
@@ -79,19 +79,6 @@
                             <artifactId>jrules-common-rs4jutils</artifactId>
                         </configuration>
                     </execution>
-
-                    <execution>
-                        <id>deploy-jrules-dataaccess-events</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/jrules-dataaccess-events.jar</file>
-                            <artifactId>jrules-dataaccess-events</artifactId>
-                        </configuration>
-                    </execution>
-
                     <execution>
                         <id>deploy-jrules-dataaccess-rs4j</id>
                         <phase>deploy</phase>
@@ -247,19 +234,6 @@
                             <artifactId>jrules-validation</artifactId>
                         </configuration>
                     </execution>
-
-                    <execution>
-                        <id>deploy-wbemodel</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/wbemodel.jar</file>
-                            <artifactId>wbemodel</artifactId>
-                        </configuration>
-                    </execution>
-
                     <execution>
                         <id>deploy-decisioncenter-dependencies</id>
                         <phase>deploy</phase>
@@ -274,89 +248,6 @@
                     </execution>
 
                     <!-- Deploy some required third party jars missing in maven central -->
-                    <execution>
-                        <id>deploy-eclipse-emf-common</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.common_2.6.0.v201006141136.jar</file>
-                            <groupId>org.eclipse.emf</groupId>
-                            <artifactId>common</artifactId>
-                            <version>2.6.0.v201006141136</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-eclipse-emf-ecore</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.ecore_2.6.0.v201006141136.jar</file>
-                            <groupId>org.eclipse.emf</groupId>
-                            <artifactId>ecore</artifactId>
-                            <version>2.6.0.v201006141136</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-eclipse-emf-ecore-edit</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.ecore-edit_2.6.0.v201006141136.jar</file>
-                            <groupId>org.eclipse.emf</groupId>
-                            <artifactId>ecore-edit</artifactId>
-                            <version>2.6.0.v201006141136</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-eclipse-emf-ecore-xmi</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.ecore-xmi_2.5.0.v201005211846.jar</file>
-                            <groupId>org.eclipse.emf</groupId>
-                            <artifactId>ecore-xmi</artifactId>
-                            <version>2.5.0.v201005211846</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-eclipse-emf-mapping</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.mapping_2.6.0.v201006141136.jar</file>
-                            <groupId>org.eclipse.emf</groupId>
-                            <artifactId>mapping</artifactId>
-                            <version>2.6.0.v201006141136</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-eclipse-emf-mapping-ecore2ecore</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/eclipse_plugins/org.eclipse.emf.mapping-ecore2ecore_2.5.0.v201005211847.jar</file>
-                            <groupId>org.eclipse.emf</groupId>
-                            <artifactId>mapping-ecore2ecore</artifactId>
-                            <version>2.5.0.v201005211847</version>
-                        </configuration>
-                    </execution>
 
                     <execution>
                         <id>deploy-json4j</id>
@@ -369,20 +260,6 @@
                             <groupId>com.ibm.json</groupId>
                             <artifactId>json4j</artifactId>
                             <version>1.0.0.2</version>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>deploy-jta</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${decisioncenter.lib}/jta-1.0.1B.jar</file>
-                            <groupId>javax.transaction</groupId>
-                            <artifactId>jta</artifactId>
-                            <version>1.0.1B</version>
                         </configuration>
                     </execution>
                 </executions>

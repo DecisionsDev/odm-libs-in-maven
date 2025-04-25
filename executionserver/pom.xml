@@ -17,7 +17,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>executionserver</artifactId>
-    <version>8.11.1.0</version>
+    <version>9.0.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -32,7 +32,7 @@
             <plugins>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.1.4</version>
                     <executions>
                         <execution>
                             <id>default-deploy</id>
@@ -101,6 +101,7 @@
                         <configuration>
                             <file>${executionserver.lib}/jrules-res-session-java.jar</file>
                             <artifactId>jrules-res-session-java</artifactId>
+                            
                         </configuration>
                     </execution>
 
@@ -151,19 +152,6 @@
                             <artifactId>jrules-res-tools</artifactId>
                         </configuration>
                     </execution>
-
-                    <execution>
-                        <id>deploy-jrules-res-memory-agentclient</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${executionserver.lib}/jrules-res-memory-agentclient.jar</file>
-                            <artifactId>jrules-res-memory-agentclient</artifactId>
-                        </configuration>
-                    </execution>
-
                     <execution>
                         <id>deploy-jrules-mbean-descriptors</id>
                         <phase>deploy</phase>
@@ -269,6 +257,7 @@
                         <configuration>
                             <file>${project.basedir}/executionserver-engine-dependencies.xml</file>
                             <artifactId>executionserver-engine-dependencies</artifactId>
+                            <version>${odm.version}</version>
                             <packaging>pom</packaging>
                         </configuration>
                     </execution>
@@ -282,6 +271,7 @@
                         <configuration>
                             <file>${project.basedir}/executionserver-j2serulesession-dependencies.xml</file>
                             <artifactId>executionserver-j2serulesession-dependencies</artifactId>
+                            <version>${odm.version}</version>
                             <packaging>pom</packaging>
                         </configuration>
                     </execution>
@@ -295,6 +285,7 @@
                         <configuration>
                             <file>${project.basedir}/executionserver-j2eerulesession-dependencies.xml</file>
                             <artifactId>executionserver-j2eerulesession-dependencies</artifactId>
+                            <version>${odm.version}</version>
                             <packaging>pom</packaging>
                         </configuration>
                     </execution>

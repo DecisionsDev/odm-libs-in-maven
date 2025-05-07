@@ -262,6 +262,32 @@
                             <version>1.0.0.2</version>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>deploy-serializer</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/serializer-2.7.3.IBM.jar</file>
+                            <groupId>com.ibm.serializer</groupId>
+                            <artifactId>serializer</artifactId>
+                            <version>2.7.3.IBM</version>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>deploy-xalan</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${decisioncenter.lib}/xalan-2.7.3.IBM.jar</file>
+                            <groupId>com.ibm.xalan</groupId>
+                            <artifactId>xalan</artifactId>
+                            <version>2.7.3.IBM</version>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>

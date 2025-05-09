@@ -469,6 +469,7 @@
                             <groupId>com.ibm.xalan</groupId>
                             <artifactId>xalan</artifactId>
                             <version>2.7.3.IBM</version>
+                             <pomFile>${project.basedir}/internal/xalan.pom</pomFile>
                         </configuration>
                     </execution>
                 </executions>

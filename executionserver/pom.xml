@@ -445,33 +445,7 @@
                             <version>1.2.IBM</version>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>deploy-serializer</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${executionserver.lib}/serializer-2.7.3.IBM.jar</file>
-                            <groupId>com.ibm.serializer</groupId>
-                            <artifactId>serializer</artifactId>
-                            <version>2.7.3.IBM</version>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-xalan</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${executionserver.lib}/xalan-2.7.3.IBM.jar</file>
-                            <groupId>com.ibm.xalan</groupId>
-                            <artifactId>xalan</artifactId>
-                            <version>2.7.3.IBM</version>
-                             <pomFile>${project.basedir}/internal/xalan.pom</pomFile>
-                        </configuration>
-                    </execution>
+                    
                 </executions>
             </plugin>
         </plugins>

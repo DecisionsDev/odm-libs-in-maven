@@ -16,7 +16,7 @@
 
     <groupId>com.ibm.odm</groupId>
     <artifactId>executionserver-j2serulesession-dependencies</artifactId>
-    <version>9.0.0.0</version>
+    <version>8.12.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -80,17 +80,17 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.16.0</version>
+            <version>2.14.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.16.0</version>
+            <version>2.14.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.16.0</version>
+            <version>2.14.2</version>
         </dependency>
         <dependency>
             <groupId>commons-discovery</groupId>
@@ -100,7 +100,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.16.1</version>
+            <version>1.15</version>
         </dependency>
         <dependency>
             <groupId>commons-math3</groupId>
@@ -111,13 +111,13 @@
         <dependency>
             <groupId>commons-collections4</groupId>
             <artifactId>commons-collections4</artifactId>
-            <version>4.4</version>
+            <version>4.2</version>
         </dependency>
 
          <dependency>
             <groupId>commons-compress</groupId>
             <artifactId>commons-compress</artifactId>
-            <version>1.26.1</version>
+            <version>1.21</version>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>
@@ -140,7 +140,11 @@
             <artifactId>javax.inject</artifactId>
             <version>1</version>
         </dependency>
-        
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.8.2.2</version>
+        </dependency>
         <dependency>
             <groupId>javax.activation</groupId>
             <artifactId>javax.activation</artifactId>
@@ -203,22 +207,23 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>4.1.2</version>
+            <version>4.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>4.1.2</version>
+            <version>4.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml-schemas</artifactId>
-            <version>4.1.2</version>
+            <version>4.0.1</version>
         </dependency>
+        
         <dependency>
-            <groupId>com.ibm.serializer</groupId>
+            <groupId>xalan</groupId>
             <artifactId>serializer</artifactId>
-            <version>2.7.3.IBM</version>
+            <version>2.7.2</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -231,15 +236,14 @@
             <version>1.6.2</version>
         </dependency>
         <dependency>
-            <groupId>com.ibm.xalan</groupId>
+            <groupId>xalan</groupId>
             <artifactId>xalan</artifactId>
-            <version>2.7.3.IBM</version>
+            <version>2.7.2</version>
         </dependency>
-       
         <dependency>
             <groupId>org.apache.xmlbeans</groupId>
             <artifactId>xmlbeans</artifactId>
-            <version>3.1.0</version>
+            <version>3.0.2</version>
         </dependency>
     </dependencies>
 </project>
